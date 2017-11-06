@@ -11,6 +11,19 @@ class TextformatterFluidImages extends Textformatter implements ConfigurableModu
     /**
      *
      */
+	public static function getModuleInfo() {
+		return array(
+			'title'   => __('Fluid Images Textformatter'),
+			'version' => '0.3.0',
+			'summary' => __("Removes the height attribute and adds a class to img tags. Set max-width:100% for the class in your CSS and you have fluid images."),
+            'href'    => 'https://github.com/ocorreiododiogo/PW-removeHeights',
+            'author'  => 'diogo & netcarver',
+		);
+	}
+
+    /**
+     *
+     */
     static public function getDefaultConfig() {
         return array(
         'image_class'         => 'image-width-control',
@@ -27,19 +40,6 @@ class TextformatterFluidImages extends Textformatter implements ConfigurableModu
             $this->$key = $value;
         }
     }
-
-    /**
-     *
-     */
-	public static function getModuleInfo() {
-		return array(
-			'title'   => __('Fluid Images Textformatter'),
-			'version' => '0.2.0',
-			'summary' => __("Removes the height attribute and adds a class to img tags. Set max-width:100% for the class in your CSS and you have fluid images."),
-            'href'    => 'https://github.com/ocorreiododiogo/PW-removeHeights',
-            'author'  => 'diogo & netcarver',
-		);
-	}
 
 
     /**

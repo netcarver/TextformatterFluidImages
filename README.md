@@ -15,5 +15,4 @@ To complete making the image tags fluid, add the following to your stylesheet
 Credits
 -------
 
-This is based upon [another textformatter](https://github.com/ocorreiododiogo/PW-removeHeights) by Diogo Oliveirathat I
-stumbled upon.
+This is based upon the [RemoveHeights textformatter](thttps://gihub.com/ocorreiododiogo/PW-removeHeights) by Diogo Oliveira.
