@@ -15,4 +15,4 @@ To complete making the image tags fluid, add the following to your stylesheet
 Credits
 -------
 
-This is based upon the [RemoveHeights textformatter](thttps://gihub.com/ocorreiododiogo/PW-removeHeights) by Diogo Oliveira.
+This is based upon the [RemoveHeights textformatter](https://gihub.com/ocorreiododiogo/PW-removeHeights) by Diogo Oliveira.
