@@ -14,7 +14,7 @@ class TextformatterFluidImages extends Textformatter implements ConfigurableModu
 	public static function getModuleInfo() {
 		return array(
 			'title'   => __('Fluid Images'),
-			'version' => '0.3.1',
+			'version' => '1.0.0',
 			'summary' => __("Removes the height attribute and adds a class to img tags. Set max-width:100% for the class in your CSS and you have fluid images."),
             'href'    => 'https://github.com/ocorreiododiogo/PW-removeHeights',
             'author'  => 'diogo & netcarver',
@@ -72,7 +72,8 @@ class TextformatterFluidImages extends Textformatter implements ConfigurableModu
             }
         }
 
-		$str = $dom->saveHTML();
+        $doc = $dom->saveHTML();
+        $str = preg_replace('/^<!DOCTYPE.+?>/', '', str_replace( array('<html>', '</html>', '<body>', '</body>'), array('', '', '', ''), $doc));
 	}
 
 
@@ -98,7 +99,7 @@ class TextformatterFluidImages extends Textformatter implements ConfigurableModu
         $f = $m->get('InputfieldText');
         $f->attr('name', 'image_class');
         $f->label = __("CSS Class to add to images");
-        $f->pattern = '[a-z0-9 _-]*';
+        $f->pattern = '[ a-z0-9_-]*';
         $f->description = __("What class would you like to add to the images? A blank entry here will cause an embedded style to be added to each image, otherwise, a class will be added.");
         $notes = array();
         if (!empty($data['image_class'])) {

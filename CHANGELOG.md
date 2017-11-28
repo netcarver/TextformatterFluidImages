@@ -1,3 +1,7 @@
+## 1.0.0 2017-11-28
+- BREAKING CHANGE: strip the doctype and html markup inserted by the PHP Dom manipulation library.
+- Allow multiple additional classes to be applied to images.
+
 ## 0.3.0 2017-11-06
 - Fix readme type.
 - Add CHANGELOG.md file.
